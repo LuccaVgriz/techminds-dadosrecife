@@ -1,7 +1,8 @@
 # Documentação Técnica – Arquitetura da Solução
 
 **Projeto:** DadosRecife – Mercado de Trabalho e Renda
-**Equipe:** TechMinds
+**Equipe:** Tech Minds — João Pedro da Silva, Hugo Leonardo Ferreira da Silva, Maria Eduarda de Araújo Feliciano e Lucca Viana Griz de Goes Cavalcanti
+**Disciplina:** Coding · **Turma:** 2NMB
 
 ## 1. Visão geral
 

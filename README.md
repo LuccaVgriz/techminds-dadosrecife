@@ -6,6 +6,17 @@ Plataforma web para consulta de indicadores de **mercado de trabalho e renda** p
 - **Back-end:** Node.js (API REST, só módulos nativos)
 - **Banco de dados:** SQLite
 
+## Equipe Tech Minds
+
+Disciplina: Coding · Turma: 2NMB · Desafio: Observatório de Emprego e Renda do Recife
+
+| Integrante | Matrícula |
+|---|---|
+| João Pedro da Silva | 01890017 |
+| Hugo Leonardo Ferreira da Silva | 01901371 |
+| Maria Eduarda de Araújo Feliciano | 01939384 |
+| Lucca Viana Griz de Goes Cavalcanti | 01943007 |
+
 ## Requisitos
 
 - [Node.js](https://nodejs.org) **22.13 ou mais novo** (não precisa de `npm install`)
@@ -39,6 +50,7 @@ npm run db:reset
 ## Documentação
 
 - [Arquitetura da solução e endpoints da API](docs/arquitetura.md)
+- [Documentação do projeto – AV2 (Word)](docs/Documentacao-AV2-TechMinds.docx)
 
 ## Estrutura
 
