@@ -46,6 +46,11 @@ servidor.on('error', (erro) => {
 });
 
 servidor.on('listening', () => {
+  // No Render, mostra o endereço público do site
+  if (process.env.RENDER_EXTERNAL_URL) {
+    return console.log(`DadosRecife publicado em ${process.env.RENDER_EXTERNAL_URL}`);
+  }
+
   const porta = servidor.address().port;
   const endereco = `http://techminds.localhost${porta === 80 ? '' : `:${porta}`}`;
   console.log(`DadosRecife rodando em ${endereco}`);
