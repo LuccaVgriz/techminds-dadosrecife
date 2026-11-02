@@ -1,0 +1,15 @@
+{
+  "name": "dadosrecife",
+  "version": "1.0.0",
+  "description": "DadosRecife - Mercado de Trabalho e Renda (TechMinds)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "db:reset": "node backend/scripts/reset-db.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

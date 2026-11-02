@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DadosRecife – Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="login-pagina">
+    <aside class="login-lado">
+      <div>
+        <div class="marca">DADOS<span>RECIFE</span></div>
+        <div class="marca-sub">Mercado de Trabalho e Renda</div>
+      </div>
+      <div>
+        <h2>Informação que gera melhores decisões para uma cidade mais justa.</h2>
+        <p>Consulte indicadores de trabalho e renda organizados por bairro, compare territórios e gere relatórios.</p>
+      </div>
+      <small style="color:#8fa6c6">Protótipo – dados demonstrativos</small>
+    </aside>
+
+    <main class="login-form-area">
+      <!-- Formulário de login -->
+      <form class="login-card" id="formLogin" novalidate>
+        <h1>Entrar</h1>
+        <p class="sub">Acesse o painel com seu e-mail e senha.</p>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" autocomplete="username" required>
+        </div>
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" autocomplete="current-password" required>
+        </div>
+        <p class="erro-msg" id="erroLogin"></p>
+        <button class="btn bloco" type="submit" id="btnEntrar">Entrar</button>
+        <p style="margin-top:16px;font-size:13px;text-align:center">
+          Não tem conta? <button type="button" class="link-btn" id="irCadastro">Criar conta</button>
+        </p>
+        <div class="dica">Usuário de teste: <b>gestor@dadosrecife.com</b> / senha <b>123456</b></div>
+      </form>
+
+      <!-- Formulário de cadastro -->
+      <form class="login-card" id="formCadastro" novalidate hidden>
+        <h1>Criar conta</h1>
+        <p class="sub">Preencha os dados para se cadastrar.</p>
+        <div class="campo">
+          <label for="cadNome">Nome</label>
+          <input type="text" id="cadNome" required>
+        </div>
+        <div class="campo">
+          <label for="cadEmail">E-mail</label>
+          <input type="email" id="cadEmail" autocomplete="username" required>
+        </div>
+        <div class="campo">
+          <label for="cadSenha">Senha (mín. 6 caracteres)</label>
+          <input type="password" id="cadSenha" autocomplete="new-password" required>
+        </div>
+        <p class="erro-msg" id="erroCadastro"></p>
+        <button class="btn bloco" type="submit" id="btnCadastrar">Cadastrar</button>
+        <p style="margin-top:16px;font-size:13px;text-align:center">
+          Já tem conta? <button type="button" class="link-btn" id="irLogin">Entrar</button>
+        </p>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
