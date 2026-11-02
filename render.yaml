@@ -1,0 +1,12 @@
+# Configuração de hospedagem no Render (https://render.com) — plano gratuito
+services:
+  - type: web
+    name: techminds-dadosrecife
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /login.html
+    envVars:
+      - key: NODE_VERSION
+        value: "24"

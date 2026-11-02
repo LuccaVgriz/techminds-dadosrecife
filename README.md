@@ -29,7 +29,9 @@ npm start
 
 Acesse **http://techminds.localhost** (ou http://localhost).
 
-> A porta padrão é a 80. Para usar outra: `PORT=3000 npm start` (Git Bash) ou `$env:PORT=3000; npm start` (PowerShell).
+> A porta padrão é a 80; se estiver ocupada, o servidor usa a 3000 automaticamente. Para escolher outra: `$env:PORT=4000; npm start` (PowerShell).
+
+**Sem Node.js instalado?** Dê dois cliques em `INICIAR.bat` (precisa da pasta `node/` com o `node.exe`). **Publicar na internet:** veja [docs/deploy.md](docs/deploy.md).
 
 Login de teste: `gestor@dadosrecife.com` / `123456` — também é possível criar uma conta na tela de login.
 

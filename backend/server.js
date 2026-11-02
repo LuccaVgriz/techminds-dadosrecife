@@ -33,7 +33,33 @@ const servidor = http.createServer(async (req, res) => {
   }
 });
 
-servidor.listen(config.porta, () => {
-  const porta = config.porta === 80 ? '' : `:${config.porta}`;
-  console.log(`DadosRecife rodando em http://techminds.localhost${porta}`);
+// Se a porta padrão (80) estiver ocupada ou bloqueada, tenta a 3000
+servidor.on('error', (erro) => {
+  const podeTrocar = !process.env.PORT && servidor.portaAtual === 80;
+  if (podeTrocar && (erro.code === 'EADDRINUSE' || erro.code === 'EACCES')) {
+    console.log('Porta 80 indisponível, usando a porta 3000...');
+    iniciar(3000);
+  } else {
+    console.error(`Não foi possível iniciar o servidor: ${erro.message}`);
+    process.exit(1);
+  }
 });
+
+servidor.on('listening', () => {
+  const porta = servidor.address().port;
+  const endereco = `http://techminds.localhost${porta === 80 ? '' : `:${porta}`}`;
+  console.log(`DadosRecife rodando em ${endereco}`);
+  console.log('Para desligar, feche esta janela ou aperte Ctrl + C.');
+
+  // Usado pelo INICIAR.bat para abrir o navegador automaticamente
+  if (process.env.ABRIR_NAVEGADOR && process.platform === 'win32') {
+    require('node:child_process').exec(`start "" "${endereco}"`);
+  }
+});
+
+function iniciar(porta) {
+  servidor.portaAtual = porta;
+  servidor.listen(porta);
+}
+
+iniciar(config.porta);
